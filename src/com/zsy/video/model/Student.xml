@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 和 接口类全路径一致 -->
+<mapper namespace="com.zsy.video.dao.IStudentDao">
+<!-- student映射 -->
+    <resultMap type="student" id="studentMap">
+    <id column="sid" property="sid"/>
+    <result column="srealname" property="srealname"/>
+    <result column="snickname" property="snickname"/>
+    <result column="spassword" property="spassword"/>
+    <result column="school" property="school"/>
+    <result column="sarea" property="sarea"/>
+    <result column="sgrade" property="sgrade"/>
+    <result column="sphone" property="sphone"/>
+    <result column="semail" property="semail"/>
+    <result column="sqq" property="sqq"/>
+    <result column="simage" property="simage"/>
+    </resultMap>
+    
+    <select id="getStudents" resultMap="studentMap">
+    select * from enroll_student
+    </select>
+    <select id="login" parameterType="map" resultMap="studentMap">
+    select * from enroll_student
+    where snickname=#{snickname} and spassword=#{spassword}
+    </select>
+    <select id="findStudent" parameterType="String" resultMap="studentMap">
+    select * from enroll_student
+    where snickname=#{snickname}
+    </select>
+    <insert id="addStudent" parameterType="student">
+    insert into enroll_student(sid,snickname,spassword,semail)
+    values(#{sid},#{snickname},#{spassword},#{semail}) 
+    </insert>
+    <update id="updateStudent" parameterType="student">
+    update enroll_student
+    set srealname=#{srealname},snickname=#{snickname},spassword=#{spassword},
+    school=#{school},sarea=#{sarea},sgrade=#{sgrade},sphone=#{sphone},semail=#{semail},sqq=#{sqq},
+    simage=#{simage}
+    where sid=#{sid}
+    </update>
+</mapper>

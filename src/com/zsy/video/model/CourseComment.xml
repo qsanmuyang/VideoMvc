@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsy.video.dao.ICourseCommentDao">
+       <resultMap type="courseComment" id="courseCommentsMap">
+       <id column="ccid" property="ccid" />
+       <result column="snickname" property="snickname" />
+       <result column="cconment" property="cconment" />
+       <result column="ccdate" property="ccdate" />
+       </resultMap>
+       <select id="getCommentsByCid" parameterType="int" resultMap="courseCommentsMap" >
+       select * from course_comment
+       where c_id=#{c_id}
+       </select>
+</mapper>

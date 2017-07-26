@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #f3f5f7;
+}
+
+.right-nav {
+	float: right;
+	margin-right: 100px;
+	max-height: 200px;
+}
+
+.banner-bottom {
+	position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+	margin-left: 10%;
+	width: 80%;
+	box-shadow: 0px 5px 10px 0px #000;
+}
+
+.banner-bottom ul li{
+	float: left;
+	width: 175px;
+	margin-right: 20px;
+}
+
+
+.banner-bottom-box {
+	width: 100%;
+	height: 105px;
+}
+
+.dark{
+	height: 92px;
+	width: 200px;
+	background-color:RGBA(0,0,0,0.6);
+	border-bottom:1px solid #FFF;
+	 line-height: 92px;
+	color:white;
+	text-indent: 2em;
+}
+
+.light{
+	height: 92px;
+	width: 200px;
+	background-color:RGBA(255,255,255,0.6);
+	border-bottom:1px solid #FFF;
+	 line-height: 92px;
+	color:black;
+	text-indent: 2em;
+}
+
+.m-title {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+}
+.m-title a{
+	float: right;
+	margin-right: 10px;
+	line-height: 40px;
+	text-decoration: none;
+}
+
+.m-title span{
+	line-height: 40px;
+	font-size: 20px;
+}
+
+.m-container {
+	width: 84%;
+	margin-left: 7%;
+}
+
+.banner {
+	float: left;
+	width: 100%;
+	height: 460px;
+	padding: 0px;
+	margin-left: -14px;
+	transition: all 0.5s;
+}
+
+.banner img{
+	width: 1080px;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.head-img {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+.couser-card-top {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-1.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top1 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-2.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top2 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-3.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top3 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-4.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top4 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-5.jpg);
+	background-size: 100%;
+}
+
+.name {
+	width: 100px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.teacher-detail {
+	width: 100px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.user-head {
+	margin-left: auto;
+	margin-right: auto;
+	height: 64px;
+	width: 64px;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+.video-head {
+	width: 160px;
+	height: 90px;
+}
+
+.right-btn {
+	float: right;
+}
+
+.toogle {
+	width: 100%;
+	display: none;
+}
+
+
+#banner-img {
+	height: 460px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+.data-bg {
+	width: 100%;
+	height: 300px;
+	background-image: url(../images/cardtop-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 100px;
+	color: white;
+}
+
+.data-bg span{
+	font-size: 22px;
+	font-weight: bold;
+}
+.angel {
+	width: 0;
+	height: 0;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #d9edf7 transparent;
+	margin-left: 30px;
+	transition: all 0.5s;
+}
+
+.divide {
+	width: 100%;
+	height: 1px;
+	background-color: #337ab7;
+}
+
+.switch-tab {
+	font-size: 20px;
+}
+
+.slider-container {
+	width: 200%;
+	transition: all 0.5s;
+}
+
+.sl-container {
+	width: 100%;
+	overflow: hidden;
+}
+
+.chapter-container {
+	float: left;
+	width: 50%;
+	background-color: white;
+}
+
+.chapter {
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.commit-container {
+	float: left;
+	width: 50%;
+}
+
+.panel-container {
+	border-radius: 3px;
+	background-color: white;
+}
+
+.data-list {
+	
+}
+
+.data-list li{
+	padding-left: 20px;
+}
+.pointerspan {
+	cursor: pointer;
+}

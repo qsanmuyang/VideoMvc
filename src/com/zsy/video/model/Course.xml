@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 和 接口类全路径一致 -->
+<mapper namespace="com.zsy.video.dao.ICourseDao">
+<!-- student映射 -->
+    <resultMap type="course" id="courseMap">
+    <id column="c_id" property="c_id"/>
+    <result column="cname" property="cname"/>
+    <result column="cintro" property="cintro"/>
+    <result column="grade" property="grade"/>
+    <result column="tname" property="tname"/>
+    <result column="cprice" property="cprice"/>
+    <result column="subject" property="subject"/>
+    </resultMap>
+    
+    <select id="getCourses" resultMap="courseMap" >
+    select * from course
+    </select>
+    <select id="getCourses1" parameterType="map" resultMap="courseMap" >
+    select * from course LIMIT #{begin},#{pageNum}
+    </select>
+    
+    <select id="getNoFreeCourses" resultMap="courseMap">
+    select * from course where cprice > 0
+    </select>
+    
+    <select id="getFreeCourses" resultMap="courseMap">
+    select * from course where cprice = 0
+    </select>
+    
+    <select id="getSubjectCourses" parameterType="String" resultMap="courseMap" >
+    select * from course where subject=#{subject}
+    </select>
+    <select id="getSubjectCourses1" parameterType="map" resultMap="courseMap" >
+    select * from course where subject=#{subject} LIMIT #{begin},#{pageNum}
+    </select>
+    
+    <select id="getVideoList" parameterType="map" resultMap="courseMap">
+    select * from course where subject=#{subject} and grade=#{grade}
+    </select>
+     <select id="getVideoList1" parameterType="map" resultMap="courseMap">
+    select * from course where subject=#{subject} and grade=#{grade} LIMIT #{begin},#{pageNum}
+    </select>
+    
+    <select id="getCoursesByGrade" parameterType="String" resultMap="courseMap">
+    select * from course where grade=#{grade}
+    </select>
+    <select id="getCoursesByGrade1" parameterType="map" resultMap="courseMap">
+    select * from course where grade=#{grade} LIMIT #{begin},#{pageNum}
+    </select>
+    
+    <select id="getCourseByCid" parameterType="int" resultType="course">
+    select * from course where c_id=#{c_id}
+    </select>
+</mapper>

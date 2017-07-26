@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #f3f5f7;
+}
+
+.right-nav {
+	float: right;
+	margin-right: 100px;
+	max-height: 200px;
+}
+
+.course-nav{
+	background-color: #fff;
+}
+.course-nav span{
+	font-weight: 700;
+}
+.course-nav ul li{
+	padding: 10px 0;
+	border-bottom: 1px solid #edf1f2;
+}
+.course-nav ul li a{
+	display: inline-block;
+	padding: 10px;
+	color: #14191e;
+	margin-left: 5px;
+}
+.course-nav ul li a:hover{
+	color: #f00;
+	text-decoration: none;
+}
+.course-nav ul li a.active{
+	background-color: #2b333b;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.couser-card-top {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-1.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top1 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-2.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top2 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-3.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top3 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-4.jpg);
+	background-size: 100%;
+}
+
+.couser-card-top4 {
+	height: 40px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-image: url(../images/cardtop-5.jpg);
+	background-size: 100%;
+}
+
+#videoList h3{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#videoList h3+p{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:3;
+	/*height: 70px;*/
+}

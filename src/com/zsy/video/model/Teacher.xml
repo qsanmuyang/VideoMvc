@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 和 接口类全路径一致 -->
+<mapper namespace="com.zsy.video.dao.ITeacherDao">
+<!-- student映射 -->
+    <resultMap type="teacher" id="teacherMap">
+    <id column="tid" property="tid"/>
+    <result column="trealname" property="trealname"/>
+    <result column="tnickname" property="tnickname"/>
+    <result column="tpassword" property="tpassword"/>
+    <result column="tschool" property="school"/>
+    <result column="tarea" property="tarea"/>
+    <result column="tphone" property="tphone"/>
+    <result column="temail" property="temail"/>
+    <result column="tqq" property="tqq"/>
+    <result column="teducation" property="teducation"/>
+    <result column="tcourse" property="tcourse"/>
+    <result column="texperience" property="texperience"/>
+    <result column="timage" property="timage"/>
+    </resultMap>
+    
+    <select id="getTeachers" resultMap="teacherMap">
+    select * from enroll_teacher
+    </select>
+    
+    <select id="login" parameterType="map" resultMap="teacherMap">
+    select * from enroll_teacher
+    where tnickname=#{tnickname} and tpassword=#{tpassword}
+    </select>
+    
+    <select id="findTeacher" parameterType="String" resultMap="teacherMap">
+    select * from enroll_teacher
+    where tnickname=#{tnickname}
+    </select>
+
+    <insert id="addTeacher" parameterType="teacher">
+    insert into enroll_teacher(tid,tnickname,tpassword,tphone,temail,teducation,tcourse)
+    values(#{tid},#{tnickname},#{tpassword},#{tphone},#{temail},#{teducation},#{tcourse}) 
+    </insert>
+    <update id="updateTeacher" parameterType="teacher">
+    update enroll_teacher
+    set tnickname=#{tnickname},temail=#{temail},tqq=#{tqq},tphone=#{tphone},teducation=#{teducation},
+    tcourse=#{tcourse},texperience=#{texperience},tschool=#{school},tarea=#{tarea},trealname=#{trealname}
+    where tid=#{tid}
+    </update>
+</mapper>

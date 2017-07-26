@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <typeAliases>
+   <typeAlias type="com.zsy.video.model.Student" alias="student"/>
+   <typeAlias type="com.zsy.video.model.Teacher" alias="teacher"/>
+   <typeAlias type="com.zsy.video.model.Course" alias="course"/>
+   <typeAlias type="com.zsy.video.model.Chapter" alias="chapter"/>
+   <typeAlias type="com.zsy.video.model.Video" alias="video"/>
+   <typeAlias type="com.zsy.video.model.CourseComment" alias="courseComment"/>
+   <typeAlias type="com.zsy.video.model.ChapterComment" alias="chapterComment"/>
+ </typeAliases>
+<!-- 环境变量配置集合 -->
+  <environments  default="dev">
+  <!-- 一个环境变量得配置 -->
+   <environment  id="dev">
+   <!-- 声明事务管理 -->
+    <transactionManager type="JDBC"/>
+    <!-- 数据源配置 POOLED 数据连接池 -->
+     <dataSource type="POOLED">
+     <!-- 指定连接驱动 -->
+      <property name="driver" value="com.mysql.jdbc.Driver"/>
+      <!-- 指定数据库得连接URL字符串 -->
+      <property name="url" value="jdbc:mysql://127.0.0.1:3306/videos?characterEncoding=UTF-8"/>
+      <property name="username" value="root"/>
+      <property name="password" value=""/>
+     </dataSource>
+   </environment>
+  <!--
+  <environment id="product">
+  
+  </environment>-->
+  </environments>
+  <!-- 所有ORM映射文件 -->
+  <mappers>
+    <mapper resource="com/zsy/video/model/Student.xml"/>
+    <mapper resource="com/zsy/video/model/Teacher.xml"/>
+    <mapper resource="com/zsy/video/model/Course.xml"/>
+    <mapper resource="com/zsy/video/model/Chapter.xml"/>
+    <mapper resource="com/zsy/video/model/Video.xml"/>
+    <mapper resource="com/zsy/video/model/CourseComment.xml"/>
+    <mapper resource="com/zsy/video/model/ChapterComment.xml"/>
+  </mappers>
+</configuration>

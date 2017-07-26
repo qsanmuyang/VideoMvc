@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsy.video.dao.IChapterDao">
+
+         <resultMap type="chapter" id="chaptersMap">
+         <id column="cptid" property="cptid" />
+         <result column="c_id" property="c_id"/>
+         <result column="chaptername" property="chaptername"/>
+         </resultMap>
+         
+         <select id="getChaptersByCid" parameterType="int" resultMap="chaptersMap">
+         select * from chapter
+         where c_id=#{c_id}
+         </select>
+         
+</mapper>

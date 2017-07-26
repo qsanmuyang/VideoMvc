@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsy.video.dao.IChapterCommentDao">
+          <resultMap type="chapterComment" id="chapterCommentsMap">
+          <id column="cid" property="cid"/>
+          <result column="snickname" property="snickname"/>
+          <result column="ccontent" property="ccontent"/>
+          <result column="cdate" property="cdate"/>
+          <result column="vid" property="vid"/>
+          </resultMap>
+          
+          <select id="getCommentsByVid" parameterType="int" resultMap="chapterCommentsMap">
+          select * from chapter_comment
+          where vid=#{vid}
+          ORDER BY cdate DESC
+          </select>
+          <insert id="addComment" parameterType="chapterComment">
+          insert into chapter_comment(snickname,ccontent,cdate,vid)
+          values(#{snickname},#{ccontent},#{cdate},#{vid})
+          </insert>
+</mapper>
